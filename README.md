@@ -1,5 +1,16 @@
 # Headless WordPress Multi-Practice CMS — Northium Financial
 
+## Quick Navigation
+
+* [Overview](#overview)
+* [Architecture](#architecture)
+* [Content Model](#key-features)
+* [API Design](#api-examples)
+* [Frontend](#project-structure)
+* [Setup](#setup-local-development)
+* [Screenshots](#screenshots)
+* [Future Improvements](#future-improvements)
+
 ## Overview
 
 A headless CMS built with WordPress as the backend and Next.js as the frontend.
@@ -17,8 +28,6 @@ Traditional WordPress themes tightly couple content and presentation, making it 
 ## Solution
 
 This project decouples WordPress from the frontend:
-
-# headless-wordpress-division-cms
 
 * WordPress handles structured content, the editor experience, and admin auth
 * Next.js consumes content via a custom REST API and renders fast, SEO-friendly pages
