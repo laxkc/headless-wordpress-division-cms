@@ -1,0 +1,76 @@
+# =========================================================
+# OS / Editor noise
+# =========================================================
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+.project
+.settings/
+
+# =========================================================
+# Logs / debug
+# =========================================================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+debug.log
+error_log
+
+# =========================================================
+# Tooling / dependencies (in case of future build pipeline)
+# =========================================================
+node_modules/
+.cache/
+vendor/
+dist/
+build/
+*.min.css.map
+*.min.js.map
+
+# =========================================================
+# WordPress core — never commit. Only this project's
+# wp-content (themes, plugins, mu-plugins) belongs in git.
+# =========================================================
+/wp-admin/
+/wp-includes/
+/wp-content/uploads/
+/wp-content/upgrade/
+/wp-content/cache/
+/wp-content/backups/
+/wp-content/wflogs/
+/wp-content/blogs.dir/
+
+# Local config — never commit secrets
+wp-config.php
+wp-config.local.php
+.htaccess
+.htaccess.local
+
+# Default WordPress themes (we ship our own)
+/wp-content/themes/twentytwentythree/
+/wp-content/themes/twentytwentyfour/
+/wp-content/themes/twentytwentyfive/
+
+# =========================================================
+# Theme-local
+# =========================================================
+wp-content/themes/*/languages/*.mo
+
+# =========================================================
+# Docker — keep compose file, ignore runtime data + secrets
+# =========================================================
+docker/data/
+docker/volumes/
+docker/.env

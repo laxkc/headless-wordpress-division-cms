@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/*
+ * Northium brand palette
+ *
+ * Primary  deep navy   — Sage archetype, trust + competence (color psychology)
+ * Accent   teal-green  — fresher than bank-blue or legacy-gold, signals
+ *                        independence + modern advisory
+ * Surface  cool ivory  — clinical neutral, "north light"
+ *
+ * Pair: navy + teal-green reads as next-gen advisory firm rather than
+ * legacy-bank (navy + gold) or pure fintech (single saturated color).
+ */
+
+:root {
+  --background: #f6f7f5;
+  --surface: #ffffff;
+  --foreground: #0c1a2e;
+  --foreground-soft: #1a2a44;
+  --muted: #5b6573;
+  --border: #dfe2e6;
+  --accent: #3a7d6c;        /* teal-green for backgrounds + decorative bars */
+  --accent-strong: #1f5a4d; /* darker for text on light bg (AA-safe) */
+  --accent-soft: #5fa494;   /* lighter for hover lift / dark-mode text */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-foreground-soft: var(--foreground-soft);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-surface: var(--surface);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-soft: var(--accent-soft);
+  /* Inter is loaded into --font-sans, Manrope into --font-display by next/font in layout.tsx */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a1322;
+    --surface: #11203a;
+    --foreground: #e7ecf3;
+    --foreground-soft: #c2cad7;
+    --muted: #7d8a9c;
+    --border: #1d2c44;
+    --accent: #5fa494;        /* lighter teal pops on dark navy bg */
+    --accent-strong: #8fc7b8; /* brighter for text on dark surface */
+    --accent-soft: #3a7d6c;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-feature-settings: "cv11", "ss01"; /* Inter stylistic sets: rounded l, single-story g */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings use the display face (Manrope). Tight tracking + slightly heavier weight = premium read. */
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
