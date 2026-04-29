@@ -228,31 +228,31 @@ fetch(url, {
 ## Screenshots
 
 ### Homepage
-![Homepage](docs/screenshots/01-homepage.png)
+![Homepage](docs/screenshots/01-homepage-v2.png)
 
 ### Practice hub — Founder & Equity (flagship page, single API call assembles everything)
-![Founder & Equity practice hub](docs/screenshots/02-practice-founder.png)
+![Founder & Equity practice hub](docs/screenshots/02-practice-founder-v2.png)
 
 ### Practices index
-![Practices index](docs/screenshots/07-divisions-index.png)
+![Practices index](docs/screenshots/07-divisions-index-v2.png)
 
 ### Service detail — RSU & Options Planning
-![RSU & Options Planning service](docs/screenshots/03-service-rsu.png)
+![RSU & Options Planning service](docs/screenshots/03-service-rsu-v2.png)
 
 ### Insights index — with practice filter chips
-![Insights index](docs/screenshots/04-insights.png)
+![Insights index](docs/screenshots/04-insights-v2.png)
 
 ### Insights filtered by practice — active chip state
-![Insights filtered by Tax & Estate](docs/screenshots/04b-insights-filtered.png)
+![Insights filtered by Tax & Estate](docs/screenshots/04b-insights-filtered-v2.png)
 
 ### Article detail — "The three RSU mistakes we see most often"
-![RSU mistakes article](docs/screenshots/05-article-rsu-mistakes.png)
+![RSU mistakes article](docs/screenshots/05-article-rsu-mistakes-v2.png)
 
 ### Campaign landing page — Year-End Tax Review 2026
-![Year-End Tax campaign](docs/screenshots/06-campaign-tax.png)
+![Year-End Tax campaign](docs/screenshots/06-campaign-tax-v2.png)
 
 ### Advisor profile — Marcus Reyes
-![Marcus Reyes advisor profile](docs/screenshots/08-advisor-marcus.png)
+![Marcus Reyes advisor profile](docs/screenshots/08-advisor-marcus-v2.png)
 
 ---
 
