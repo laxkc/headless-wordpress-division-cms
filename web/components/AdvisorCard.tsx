@@ -16,12 +16,12 @@ export function AdvisorCard({ advisor }: { advisor: Advisor }) {
     >
       <div
         aria-hidden
-        className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-accent/15 text-sm font-semibold text-accent-strong"
+        className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-primary text-sm font-semibold text-white"
       >
         {initials}
       </div>
       <div className="min-w-0 flex-1">
-        <p className="truncate font-medium group-hover:text-accent-strong transition-colors">
+        <p className="truncate font-medium group-hover:text-primary transition-colors">
           {advisor.name}
         </p>
         <p className="truncate text-xs text-muted">

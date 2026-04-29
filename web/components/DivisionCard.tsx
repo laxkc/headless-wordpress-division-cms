@@ -19,7 +19,7 @@ export function DivisionCard({ division }: { division: Division }) {
       <p className="mt-2 text-sm text-muted line-clamp-3">
         {division.short_description}
       </p>
-      <p className="mt-6 text-xs font-medium uppercase tracking-wider text-muted transition-colors group-hover:text-foreground">
+      <p className="mt-6 text-xs font-medium uppercase tracking-wider text-muted transition-colors group-hover:text-text">
         Explore →
       </p>
     </Link>

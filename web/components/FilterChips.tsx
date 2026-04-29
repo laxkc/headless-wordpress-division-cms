@@ -27,8 +27,8 @@ export function FilterChips({
         href={allHref}
         className={`inline-flex items-center rounded-full border px-3 py-1 text-xs transition-colors ${
           isAll
-            ? "border-accent bg-accent text-white"
-            : "border-border hover:border-foreground"
+            ? "border-primary bg-primary text-white"
+            : "border-border hover:border-text"
         }`}
       >
         {allLabel}
@@ -42,8 +42,8 @@ export function FilterChips({
             href={href}
             className={`inline-flex items-center rounded-full border px-3 py-1 text-xs transition-colors ${
               isActive
-                ? "border-accent bg-accent text-white"
-                : "border-border hover:border-foreground"
+                ? "border-primary bg-primary text-white"
+                : "border-border hover:border-text"
             }`}
           >
             {option.label}

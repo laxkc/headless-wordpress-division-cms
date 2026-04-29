@@ -15,7 +15,7 @@ export function ArticleCard({ article }: { article: Article }) {
           day: "numeric",
         })}
       </p>
-      <h3 className="mt-2 text-lg font-semibold tracking-tight group-hover:text-accent-strong transition-colors">
+      <h3 className="mt-2 text-lg font-semibold tracking-tight group-hover:text-primary transition-colors">
         {article.title}
       </h3>
       <p className="mt-2 text-sm text-muted line-clamp-3">

@@ -75,7 +75,7 @@ export default async function DivisionHubPage({
         <Container className="py-20">
           <Link
             href="/divisions"
-            className="text-xs uppercase tracking-[0.2em] text-muted hover:text-foreground"
+            className="text-xs uppercase tracking-[0.2em] text-muted hover:text-text"
           >
             ← All divisions
           </Link>
@@ -97,7 +97,7 @@ export default async function DivisionHubPage({
         <section className="py-16">
           <Container>
             <div
-              className="prose max-w-3xl text-foreground/90 [&_p]:text-lg [&_p]:leading-relaxed [&_p]:mb-4"
+              className="prose max-w-3xl text-text/90 [&_p]:text-lg [&_p]:leading-relaxed [&_p]:mb-4"
               dangerouslySetInnerHTML={{ __html: division.full_description }}
             />
           </Container>

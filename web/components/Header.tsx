@@ -22,14 +22,14 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="hover:text-foreground transition-colors"
+              className="hover:text-text transition-colors"
             >
               {item.label}
             </Link>
           ))}
           <Link
             href="/search"
-            className="rounded-full border border-border px-3 py-1 text-xs hover:border-foreground transition-colors"
+            className="rounded-full border border-border px-3 py-1 text-xs hover:border-text transition-colors"
           >
             Search
           </Link>

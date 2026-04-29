@@ -66,14 +66,14 @@ export default async function AdvisorDetailPage({
         <Container className="py-16">
           <Link
             href="/advisors"
-            className="text-xs uppercase tracking-[0.2em] text-muted hover:text-foreground"
+            className="text-xs uppercase tracking-[0.2em] text-muted hover:text-text"
           >
             ← All advisors
           </Link>
           <div className="mt-8 flex items-center gap-6">
             <div
               aria-hidden
-              className="flex h-20 w-20 flex-none items-center justify-center rounded-full bg-accent/10 text-2xl font-semibold text-accent"
+              className="flex h-20 w-20 flex-none items-center justify-center rounded-full bg-primary text-2xl font-semibold text-white"
             >
               {initials}
             </div>
@@ -91,7 +91,7 @@ export default async function AdvisorDetailPage({
         <section className="py-16">
           <Container>
             <div
-              className="prose max-w-3xl text-foreground/90 [&_p]:text-lg [&_p]:leading-relaxed [&_p]:mb-4"
+              className="prose max-w-3xl text-text/90 [&_p]:text-lg [&_p]:leading-relaxed [&_p]:mb-4"
               dangerouslySetInnerHTML={{ __html: advisor.bio }}
             />
           </Container>
@@ -111,7 +111,7 @@ export default async function AdvisorDetailPage({
                 <Link
                   key={d.id}
                   href={`/divisions/${d.slug}`}
-                  className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-1.5 text-sm text-foreground hover:border-foreground transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-1.5 text-sm text-text hover:border-text transition-colors"
                 >
                   {d.accent_color ? (
                     <span
@@ -130,7 +130,7 @@ export default async function AdvisorDetailPage({
             {advisor.email ? (
               <a
                 href={`mailto:${advisor.email}`}
-                className="text-muted hover:text-foreground"
+                className="text-muted hover:text-text"
               >
                 {advisor.email}
               </a>
@@ -140,7 +140,7 @@ export default async function AdvisorDetailPage({
                 href={advisor.linkedin_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted hover:text-foreground"
+                className="text-muted hover:text-text"
               >
                 LinkedIn ↗
               </a>

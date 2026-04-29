@@ -242,6 +242,9 @@ fetch(url, {
 ### Insights index — with practice filter chips
 ![Insights index](docs/screenshots/04-insights.png)
 
+### Insights filtered by practice — active chip state
+![Insights filtered by Tax & Estate](docs/screenshots/04b-insights-filtered.png)
+
 ### Article detail — "The three RSU mistakes we see most often"
 ![RSU mistakes article](docs/screenshots/05-article-rsu-mistakes.png)
 
@@ -250,6 +253,7 @@ fetch(url, {
 
 ### Advisor profile — Marcus Reyes
 ![Marcus Reyes advisor profile](docs/screenshots/08-advisor-marcus.png)
+
 ---
 
 ## Future Improvements

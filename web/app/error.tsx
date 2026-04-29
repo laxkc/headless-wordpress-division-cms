@@ -30,13 +30,13 @@ export default function GlobalError({
       <div className="mt-8 flex flex-wrap gap-3">
         <button
           onClick={reset}
-          className="inline-flex items-center rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-white hover:bg-accent-strong transition-colors"
+          className="inline-flex items-center rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-strong transition-colors"
         >
           Try again
         </button>
         <Link
           href="/"
-          className="inline-flex items-center rounded-full border border-border px-5 py-2.5 text-sm font-medium hover:border-foreground transition-colors"
+          className="inline-flex items-center rounded-full border border-border px-5 py-2.5 text-sm font-medium hover:border-text transition-colors"
         >
           Back to home
         </Link>

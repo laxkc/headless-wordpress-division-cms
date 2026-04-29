@@ -48,7 +48,7 @@ export default async function ServiceDetailPage({
               </>
             ) : null}
             <span className="mx-2">›</span>
-            <span className="text-foreground">
+            <span className="text-text">
               {service.title}
             </span>
           </nav>
@@ -69,7 +69,7 @@ export default async function ServiceDetailPage({
             <div className="mt-8">
               <Link
                 href={service.cta_url}
-                className="inline-flex items-center rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-white hover:bg-accent-strong transition-colors"
+                className="inline-flex items-center rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-strong transition-colors"
               >
                 {service.cta_label}
               </Link>
@@ -82,7 +82,7 @@ export default async function ServiceDetailPage({
         <section className="py-16">
           <Container>
             <div
-              className="prose max-w-3xl text-foreground/90 [&_p]:text-lg [&_p]:leading-relaxed [&_p]:mb-4"
+              className="prose max-w-3xl text-text/90 [&_p]:text-lg [&_p]:leading-relaxed [&_p]:mb-4"
               dangerouslySetInnerHTML={{ __html: service.body }}
             />
           </Container>

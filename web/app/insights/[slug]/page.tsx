@@ -77,7 +77,7 @@ export default async function InsightDetailPage({
           <Container className="py-16">
             <Link
               href="/insights"
-              className="text-xs uppercase tracking-[0.2em] text-muted hover:text-foreground"
+              className="text-xs uppercase tracking-[0.2em] text-muted hover:text-text"
             >
               ← All insights
             </Link>
@@ -95,7 +95,7 @@ export default async function InsightDetailPage({
               {author_advisor ? (
                 <Link
                   href={`/advisors/${author_advisor.slug}`}
-                  className="hover:text-foreground"
+                  className="hover:text-text"
                 >
                   By {author_advisor.name}
                 </Link>
@@ -103,7 +103,7 @@ export default async function InsightDetailPage({
               {division ? (
                 <Link
                   href={`/divisions/${division.slug}`}
-                  className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 text-xs text-foreground hover:border-foreground"
+                  className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 text-xs text-text hover:border-text"
                 >
                   {division.accent_color ? (
                     <span
@@ -122,7 +122,7 @@ export default async function InsightDetailPage({
         {article.content ? (
           <Container className="py-16">
             <div
-              className="prose mx-auto max-w-3xl text-foreground/90 [&_p]:text-lg [&_p]:leading-relaxed [&_p]:mb-4"
+              className="prose mx-auto max-w-3xl text-text/90 [&_p]:text-lg [&_p]:leading-relaxed [&_p]:mb-4"
               dangerouslySetInnerHTML={{ __html: article.content }}
             />
           </Container>

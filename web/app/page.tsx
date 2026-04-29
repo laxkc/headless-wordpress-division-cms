@@ -57,13 +57,13 @@ function Hero() {
         <div className="mt-8 flex flex-wrap gap-3">
           <Link
             href="/divisions"
-            className="inline-flex items-center rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-white hover:bg-accent-strong transition-colors"
+            className="inline-flex items-center rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-strong transition-colors"
           >
             See our practices
           </Link>
           <Link
             href="/advisors"
-            className="inline-flex items-center rounded-full border border-border px-5 py-2.5 text-sm font-medium text-foreground hover:border-foreground hover:bg-surface transition-colors"
+            className="inline-flex items-center rounded-full border border-border px-5 py-2.5 text-sm font-medium text-text hover:border-text hover:bg-surface transition-colors"
           >
             Meet the advisors
           </Link>
@@ -92,7 +92,7 @@ function DivisionsSection({
           </div>
           <Link
             href="/divisions"
-            className="hidden text-sm text-muted hover:text-foreground sm:inline-block"
+            className="hidden text-sm text-muted hover:text-text sm:inline-block"
           >
             All practices →
           </Link>
@@ -129,7 +129,7 @@ function InsightsSection({
           </div>
           <Link
             href="/insights"
-            className="hidden text-sm text-muted hover:text-foreground sm:inline-block"
+            className="hidden text-sm text-muted hover:text-text sm:inline-block"
           >
             All insights →
           </Link>

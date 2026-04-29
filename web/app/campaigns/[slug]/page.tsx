@@ -86,7 +86,7 @@ export default async function CampaignPage({
                 </div>
                 <div className="sm:col-span-8">
                   {section.body ? (
-                    <p className="text-lg leading-relaxed text-foreground/90">
+                    <p className="text-lg leading-relaxed text-text/90">
                       {section.body}
                     </p>
                   ) : null}

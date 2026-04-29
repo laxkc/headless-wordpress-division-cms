@@ -1,75 +1,71 @@
 @import "tailwindcss";
 
 /*
- * Northium brand palette
+ * Northium brand palette — your 5 semantic tokens
  *
- * Primary  deep navy   — Sage archetype, trust + competence (color psychology)
- * Accent   teal-green  — fresher than bank-blue or legacy-gold, signals
- *                        independence + modern advisory
- * Surface  cool ivory  — clinical neutral, "north light"
+ *   --primary    #1E3A8A  trust   (CTAs, links, brand)
+ *   --secondary  #10B981  growth  (success state, secondary pop)
+ *   --accent     #F59E0B  action  (decorative pop — bars, highlights)
+ *   --bg         #FFFFFF  page background
+ *   --text       #111827  body text
  *
- * Pair: navy + teal-green reads as next-gen advisory firm rather than
- * legacy-bank (navy + gold) or pure fintech (single saturated color).
+ * Plus a small set of grayscale utilities cards/borders/muted text need.
+ * Light mode only — no @media dark override, so the new system always wins.
  */
 
 :root {
-  --background: #f6f7f5;
-  --surface: #ffffff;
-  --foreground: #0c1a2e;
-  --foreground-soft: #1a2a44;
-  --muted: #5b6573;
-  --border: #dfe2e6;
-  --accent: #3a7d6c;        /* teal-green for backgrounds + decorative bars */
-  --accent-strong: #1f5a4d; /* darker for text on light bg (AA-safe) */
-  --accent-soft: #5fa494;   /* lighter for hover lift / dark-mode text */
+  --primary: #1E3A8A;
+  --secondary: #10B981;
+  --accent: #F59E0B;
+  --bg: #FFFFFF;
+  --text: #111827;
+
+  --primary-strong: #15306E;       /* darker primary, for hover */
+  --primary-soft: #DBEAFE;          /* light primary tint, for avatar wash */
+  --surface: #FFFFFF;
+  --muted: #6B7280;
+  --border: #E5E7EB;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-foreground-soft: var(--foreground-soft);
+  --color-primary: var(--primary);
+  --color-primary-strong: var(--primary-strong);
+  --color-primary-soft: var(--primary-soft);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-bg: var(--bg);
+  --color-text: var(--text);
+  --color-surface: var(--surface);
   --color-muted: var(--muted);
   --color-border: var(--border);
-  --color-surface: var(--surface);
-  --color-accent: var(--accent);
-  --color-accent-strong: var(--accent-strong);
-  --color-accent-soft: var(--accent-soft);
-  /* Inter is loaded into --font-sans, Manrope into --font-display by next/font in layout.tsx */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a1322;
-    --surface: #11203a;
-    --foreground: #e7ecf3;
-    --foreground-soft: #c2cad7;
-    --muted: #7d8a9c;
-    --border: #1d2c44;
-    --accent: #5fa494;        /* lighter teal pops on dark navy bg */
-    --accent-strong: #8fc7b8; /* brighter for text on dark surface */
-    --accent-soft: #3a7d6c;
+/*
+ * IMPORTANT: these rules MUST live inside @layer base.
+ * Unlayered styles win over Tailwind's @layer utilities, which would make
+ * `body { color: ... }` outrank `.text-white` and break button labels on
+ * blue backgrounds.
+ */
+@layer base {
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans), 'Inter', system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-feature-settings: "cv11", "ss01";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans), system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-feature-settings: "cv11", "ss01"; /* Inter stylistic sets: rounded l, single-story g */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: var(--font-display), 'Manrope', var(--font-sans), 'Inter', system-ui, sans-serif;
+    letter-spacing: -0.02em;
+  }
 
-/* Headings use the display face (Manrope). Tight tracking + slightly heavier weight = premium read. */
-h1,
-h2,
-h3,
-.font-display {
-  font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
-  letter-spacing: -0.02em;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }

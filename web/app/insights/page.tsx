@@ -106,7 +106,7 @@ function Pagination({
       {page > 1 ? (
         <Link
           href={buildHref(page - 1)}
-          className="text-muted hover:text-foreground"
+          className="text-muted hover:text-text"
         >
           ← Previous
         </Link>
@@ -119,7 +119,7 @@ function Pagination({
       {page < totalPages ? (
         <Link
           href={buildHref(page + 1)}
-          className="text-muted hover:text-foreground"
+          className="text-muted hover:text-text"
         >
           Next →
         </Link>

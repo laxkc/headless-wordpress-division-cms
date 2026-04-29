@@ -42,11 +42,22 @@ function northium_rest_not_found( string $message = 'Not found' ): WP_Error {
 	return new WP_Error( 'northium_not_found', $message, array( 'status' => 404 ) );
 }
 
+/**
+ * Get a post title decoded for plain-text rendering.
+ *
+ * WordPress's the_title filter HTML-encodes characters like & (e.g. "Tax
+ * &#038; Estate"). The frontend renders titles as text, not HTML, so it sees
+ * the encoded entity literally. Decoding here gives consumers a clean string.
+ */
+function northium_get_title( WP_Post $post ): string {
+	return html_entity_decode( get_the_title( $post ), ENT_QUOTES | ENT_HTML5, 'UTF-8' );
+}
+
 function northium_format_division( WP_Post $post, bool $full = false ): array {
 	$out = array(
 		'id'                => $post->ID,
 		'slug'              => $post->post_name,
-		'title'             => get_the_title( $post ),
+		'title'             => northium_get_title( $post ),
 		'short_description' => $post->post_excerpt,
 		'hero_image'        => northium_rest_thumbnail( $post->ID ),
 		'accent_color'      => get_post_meta( $post->ID, 'accent_color', true ) ?: null,
@@ -63,7 +74,7 @@ function northium_format_service( WP_Post $post, bool $full = false ): array {
 	$out = array(
 		'id'             => $post->ID,
 		'slug'           => $post->post_name,
-		'title'          => get_the_title( $post ),
+		'title'          => northium_get_title( $post ),
 		'summary'        => $post->post_excerpt,
 		'icon'           => northium_rest_image( (int) get_post_meta( $post->ID, 'icon_id', true ) ),
 		'featured_image' => northium_rest_thumbnail( $post->ID ),
@@ -82,7 +93,7 @@ function northium_format_advisor( WP_Post $post, bool $full = false ): array {
 	$out = array(
 		'id'            => $post->ID,
 		'slug'          => $post->post_name,
-		'name'          => get_the_title( $post ),
+		'name'          => northium_get_title( $post ),
 		'role'          => (string) get_post_meta( $post->ID, 'role', true ),
 		'profile_image' => northium_rest_thumbnail( $post->ID ),
 		'division_ids'  => array_values( array_filter( $division_ids ) ),
@@ -101,7 +112,7 @@ function northium_format_article( WP_Post $post, bool $full = false ): array {
 	$out = array(
 		'id'                => $post->ID,
 		'slug'              => $post->post_name,
-		'title'             => get_the_title( $post ),
+		'title'             => northium_get_title( $post ),
 		'excerpt'           => $post->post_excerpt,
 		'featured_image'    => northium_rest_thumbnail( $post->ID ),
 		'publish_date'      => mysql2date( 'c', $post->post_date_gmt, false ),
@@ -118,7 +129,7 @@ function northium_format_campaign( WP_Post $post, bool $full = false ): array {
 	$out = array(
 		'id'                 => $post->ID,
 		'slug'               => $post->post_name,
-		'title'              => get_the_title( $post ),
+		'title'              => northium_get_title( $post ),
 		'hero_image'         => northium_rest_thumbnail( $post->ID ),
 		'hero_headline'      => (string) get_post_meta( $post->ID, 'hero_headline', true ),
 		'target_division_id' => (int) get_post_meta( $post->ID, 'target_division_id', true ),

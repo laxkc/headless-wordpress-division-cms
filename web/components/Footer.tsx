@@ -16,7 +16,7 @@ export function Footer() {
     <footer className="border-t border-border mt-24 py-12 text-sm text-muted">
       <Container className="grid gap-8 sm:grid-cols-3">
         <div>
-          <p className="font-display text-base font-semibold text-foreground">
+          <p className="font-display text-base font-semibold text-text">
             Northium
           </p>
           <p className="mt-2 max-w-xs">
@@ -25,7 +25,7 @@ export function Footer() {
           </p>
         </div>
         <div>
-          <p className="text-xs uppercase tracking-wider text-foreground">
+          <p className="text-xs uppercase tracking-wider text-text">
             Practices
           </p>
           <ul className="mt-3 space-y-1.5">
@@ -33,7 +33,7 @@ export function Footer() {
               <li key={d.slug}>
                 <Link
                   href={`/divisions/${d.slug}`}
-                  className="hover:text-foreground transition-colors"
+                  className="hover:text-text transition-colors"
                 >
                   {d.label}
                 </Link>
@@ -42,22 +42,22 @@ export function Footer() {
           </ul>
         </div>
         <div>
-          <p className="text-xs uppercase tracking-wider text-foreground">
+          <p className="text-xs uppercase tracking-wider text-text">
             Firm
           </p>
           <ul className="mt-3 space-y-1.5">
             <li>
-              <Link href="/insights" className="hover:text-foreground">
+              <Link href="/insights" className="hover:text-text">
                 Insights
               </Link>
             </li>
             <li>
-              <Link href="/advisors" className="hover:text-foreground">
+              <Link href="/advisors" className="hover:text-text">
                 Advisors
               </Link>
             </li>
             <li>
-              <Link href="/search" className="hover:text-foreground">
+              <Link href="/search" className="hover:text-text">
                 Search
               </Link>
             </li>

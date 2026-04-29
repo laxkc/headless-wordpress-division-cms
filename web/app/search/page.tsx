@@ -41,11 +41,11 @@ export default async function SearchPage({
           name="q"
           defaultValue={trimmed}
           placeholder="Try “RSU” or “tax loss harvesting”"
-          className="flex-1 rounded-full border border-border bg-surface px-5 py-3 text-base outline-none focus:border-foreground"
+          className="flex-1 rounded-full border border-border bg-surface px-5 py-3 text-base outline-none focus:border-text"
         />
         <button
           type="submit"
-          className="rounded-full bg-accent px-6 py-3 text-sm font-medium text-white hover:bg-accent-strong transition-colors"
+          className="rounded-full bg-primary px-6 py-3 text-sm font-medium text-white hover:bg-primary-strong transition-colors"
         >
           Search
         </button>
