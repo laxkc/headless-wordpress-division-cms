@@ -227,27 +227,29 @@ fetch(url, {
 
 ## Screenshots
 
-(Add images here)
+### Homepage
+![Homepage](docs/screenshots/01-homepage.png)
 
-* Homepage
-* Practice page (e.g. Founder & Equity)
-* Service page (e.g. RSU & Options Planning)
-* Insights index with practice filter
-* Article detail
-* Mobile layout
+### Practice hub — Founder & Equity (flagship page, single API call assembles everything)
+![Founder & Equity practice hub](docs/screenshots/02-practice-founder.png)
 
----
+### Practices index
+![Practices index](docs/screenshots/07-divisions-index.png)
 
-## What This Project Demonstrates
+### Service detail — RSU & Options Planning
+![RSU & Options Planning service](docs/screenshots/03-service-rsu.png)
 
-* Understanding of headless CMS architecture
-* Ability to separate backend and frontend concerns through a typed contract
-* Experience with WordPress as a data platform — CPTs, meta, REST extension, WP-CLI commands, hooks, drop-ins
-* Modern Next.js (App Router, RSC data fetching, ISR with cache tags)
-* TypeScript discipline — typed REST client, shapes mirrored from PHP
-* API-driven system design with composed endpoints to avoid waterfall fetches
-* Real-world business modeling (multi-practice structure with archetype-driven design)
+### Insights index — with practice filter chips
+![Insights index](docs/screenshots/04-insights.png)
 
+### Article detail — "The three RSU mistakes we see most often"
+![RSU mistakes article](docs/screenshots/05-article-rsu-mistakes.png)
+
+### Campaign landing page — Year-End Tax Review 2026
+![Year-End Tax campaign](docs/screenshots/06-campaign-tax.png)
+
+### Advisor profile — Marcus Reyes
+![Marcus Reyes advisor profile](docs/screenshots/08-advisor-marcus.png)
 ---
 
 ## Future Improvements
